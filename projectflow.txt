@@ -75,12 +75,13 @@
          >> Check env var from powershell terminal: <<
          echo $env:AWS_ACCESS_KEY_ID
          echo $env:AWS_SECRET_ACCESS_KEY
+         # if you restart your terminal then reset both $env:AWS_ACCESS_KEY_ID="AWS_ACCESS_KEY_ID" and $env:AWS_SECRET_ACCESS_KEY="AWS_SECRET_ACCESS_KEY"
       ====================================================================================
       * Now add the access key, secret key, region name to constants.__init__.py
       * Add code to src.configuration.aws_connection.py file (To work with AWS S3 service)
       * Ensure below info in constants.__init__.py file:
             MODEL_EVALUATION_CHANGED_THRESHOLD_SCORE: float = 0.02
-            MODEL_BUCKET_NAME = "my-model-mlopsproj"
+            MODEL_BUCKET_NAME = "mine-model-mlopsproj"
             MODEL_PUSHER_S3_KEY = "model-registry"
       * Go to S3 service >> Create bucket >> Region: us-east-1 >> General purpose >>
         Bucket Name: "my-model-mlopsproj" >> uncheck: "Block all public access" and acknowledge >>
